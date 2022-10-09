@@ -1,7 +1,9 @@
 {
-  "motordrive.motors": "Wähle den zu kontrollierenden Motor",
-  "motordrive.directions": "Wähle die Drehrichtung",
   "motordrive.activate": "Platziere diesen Block in den \"beim Start\"-Block",
+  "motordrive.directions": "Wähle die Drehrichtung",
+  "motordrive.directions|param|direction": "Wähle Richtung vorwärts oder rückwärts",
+  "motordrive.motors": "Wähle den zu kontrollierenden Motor",
+  "motordrive.motors|param|motor": "Wähle Motor-Anschluss A or B",
   "motordrive.move": "Dreht den gewählten Motor in die gewählte Richtung",
   "motordrive.move|param|motor": "Wähle Motor-Anschluss A or B",
   "motordrive.move|param|direction": "Wähle Richtung vorwärts oder rückwärts",

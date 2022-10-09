@@ -1,12 +1,12 @@
 {
-  "Motors.A1A2|block": "Motor an A1/A2",
-  "Motors.B1B2|block": "Motor an B1/B2",
   "Directions.Forward|block": "Vorwärts",
   "Directions.Backward|block": "Rückwärts",
+  "Motors.A1A2|block": "Motor an A1/A2",
+  "Motors.B1B2|block": "Motor an B1/B2",
   "motordrive.activate|block": "Aktiviere MotorDrive",
-  "motordrive.motors|block": "Motor %motor",
   "motordrive.directions|block": "Richtung %direction",
-  "motordrive.move|block": "Drehe %motor|%direction|mit Geschwindigkeit %n",
+  "motordrive.motors|block": "Motor %motor",
+  "motordrive.move|block": "Drehe Motor %motor | %direction | mit Geschwindigkeit %n",
   "motordrive|block": "MotorDrive",
   "{id:category}MotorDrive": "MotorDrive"
 }

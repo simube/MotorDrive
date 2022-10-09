@@ -16,30 +16,34 @@ enum Directions {
 namespace motordrive {
 
     /**
-     * Choose, which motor you want to control
+    * Put this block in the "on start" block
     */
-    //% weight=2 blockGap=8
-    //% blockId="motordrive_motors" block="Motor %motor"
-    export function motors(motor: Motors): number {
-        return motor;
+    //% blockId=motordrive_activate
+    //% block="Activate MotorDrive"
+    export function activate(): void {
+        pins.digitalWritePin(DigitalPin.P14, 1)
     }
 
     /**
      * Choose the direction of rotation
+     * @param direction the direction to rotate
     */
     //% weight=2 blockGap=8
-    //% blockId="motordrive_directions" block="Direction %direction"
+    //% blockId="motordrive_directions"
+    //% block="Direction %direction"
     export function directions(direction: Directions): number {
         return direction;
     }
     
-
     /**
-    * Put this block in the "on start" block
+     * Choose, which motor you want to control
+     * @param motor the motor to control (A or B)
     */
-    //% blockId=motordrive_activate block="Activate MotorDrive"
-    export function activate(): void {
-        pins.digitalWritePin(DigitalPin.P14, 1)
+    //% weight=2 blockGap=8
+    //% blockId="motordrive_motors"
+    //% block="Motor %motor"
+    export function motors(motor: Motors): number {
+        return motor;
     }
     
     /**
@@ -48,7 +52,8 @@ namespace motordrive {
     * @param direction the direction to rotate
     * @param n the n from 0 (min) to 100 (max), eg:0
     */
-    //% blockId=motordrive_move block="move %motor|%direction|with speed %n"
+    //% blockId=motordrive_move
+    //% block="move Motor %motor | %direction | with speed %n"
     //% n.min=0 n.max=100
     export function move(motor: Motors, direction: Directions, n: number): void {
         if (motor === Motors.A1A2) {
