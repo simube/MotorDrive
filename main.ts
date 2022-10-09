@@ -22,7 +22,7 @@ namespace motordrive {
      * Choose, which motor you want to control
     */
     //% weight=2 blockGap=8
-    //% blockId="motordrive_motors" block="%motor"
+    //% blockId="motordrive_motors" block="Motor %motor"
     export function motors(motor: Motors): number {
         return motor;
     }
@@ -31,7 +31,7 @@ namespace motordrive {
      * Choose the direction of rotation
     */
     //% weight=2 blockGap=8
-    //% blockId="motordrive_directions" block="%direction"
+    //% blockId="motordrive_directions" block="Direction %direction"
     export function directions(direction: Directions): number {
         return direction;
     }

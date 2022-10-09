@@ -4,8 +4,8 @@
   "Directions.Forward|block": "Forwards",
   "Directions.Backward|block": "Backwards",
   "motordrive.activate|block": "Activate MotorDrive",
-  "motordrive.motors|block": "Motor",
-  "motordrive.directions|block": "Direction",
+  "motordrive.motors|block": "Motor %motor",
+  "motordrive.directions|block": "Direction %direction",
   "motordrive.move|block": "Turn %motor | %direction | with speed %n",
   "motordrive|block": "MotorDrive",
   "{id:category}MotorDrive": "MotorDrive"
