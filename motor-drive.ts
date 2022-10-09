@@ -1,8 +1,8 @@
 enum Motors {
-    //% block="Motor on A1/A2"
-    A1A2 = 1,
-    //% block="Motor on B1/B2"
-    B1B2 = 2
+    //% block="A1/A2"
+    A = 1,
+    //% block="B1/B2"
+    B = 2
 }
 
 enum Directions {
@@ -20,6 +20,7 @@ namespace motordrive {
     */
     //% blockId=motordrive_activate
     //% block="Activate MotorDrive"
+    //% weight=100
     export function activate(): void {
         pins.digitalWritePin(DigitalPin.P14, 1)
     }
@@ -31,6 +32,7 @@ namespace motordrive {
     //% weight=2 blockGap=8
     //% blockId="motordrive_directions"
     //% block="Direction %direction"
+    //% weight=40
     export function directions(direction: Directions): number {
         return direction;
     }
@@ -42,6 +44,7 @@ namespace motordrive {
     //% weight=2 blockGap=8
     //% blockId="motordrive_motors"
     //% block="Motor %motor"
+    //% weight=60
     export function motors(motor: Motors): number {
         return motor;
     }
@@ -54,9 +57,10 @@ namespace motordrive {
     */
     //% blockId=motordrive_move
     //% block="move Motor %motor | %direction | with speed %n"
+    //% weight=80
     //% n.min=0 n.max=100
     export function move(motor: Motors, direction: Directions, n: number): void {
-        if (motor === Motors.A1A2) {
+        if (motor === Motors.A) {
             pins.analogWritePin(AnalogPin.P1, n * 1023 / 100)
     
             pins.digitalWritePin(DigitalPin.P12, direction === Directions.Forward ? 1 : 0)
