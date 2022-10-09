@@ -1,7 +1,0 @@
-{
-  "motordrive.activate|block": "Activate MotorDrive",
-  "motordrive.backwards|block": "Turn %motors|backwards with speed %n",
-  "motordrive.forwards|block": "Turn %motors|forwards with speed %n",
-  "motordrive|block": "MotorDrive",
-  "{id:category}MotorDrive": "MotorDrive"
-}

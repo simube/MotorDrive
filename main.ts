@@ -8,8 +8,15 @@ enum Motors {
     MotorB = 2
 }
 
-//% color=#0fbc11 weight=10 icon="\uf1b9"
-namespace motorbit {
+enum Directions {
+    //% block="forwards"
+    Forward = 1,
+    //% block="backwards"
+    Backward = 2
+}
+
+//% color=#16ADEC weight=10 icon="\uf21c"
+namespace motordrive {
 
     /**
      * Choose, which motor you want to control
@@ -26,9 +33,7 @@ namespace motorbit {
     */
     //% blockId=motordrive_activate block="activate MotorDrive"
     export function activate(): void {
-
         pins.digitalWritePin(DigitalPin.P14, 1)
-
     }
     
     /**
@@ -36,50 +41,23 @@ namespace motorbit {
     * @param motor the motor to control (A or B)
     * @param n the n from 0 (min) to 100 (max), eg:0
     */
-    //% blockId=motordrive_forwards block="move %motors|forward with speed %n"
+    //% blockId=motordrive_move block="move %motor | %direction | with speed %n"
     //% n.min=0 n.max=100
-    export function forwards(motor: Motors, n: number): void {
-
+    export function move(motor: Motors, direction: Directions, n: number): void {
         if (motor === Motors.MotorA) {
-            pins.digitalWritePin(DigitalPin.P12, 0)
-            pins.digitalWritePin(DigitalPin.P13, 1)
-    
-            pins.analogWritePin(AnalogPin.P1, n * 1023 / 100)
-            
+            let pinSpeed = AnalogPin.P1
+            let pin1 = DigitalPin.P12
+            let pin2 = DigitalPin.P13
         } else {
-            pins.digitalWritePin(DigitalPin.P15, 0)
-            pins.digitalWritePin(DigitalPin.P16, 1)
-    
-            pins.analogWritePin(AnalogPin.P2, n * 1023 / 100)
-            
+            let pinSpeed = AnalogPin.P2
+            let pin1 = DigitalPin.P15
+            let pin2 = DigitalPin.P16
         }
 
-    }
+        pins.analogWritePin(pinSpeed, n * 1023 / 100)
 
-
-    /**
-     * TODO: describe your function here
-     * @param motor the motor to control (A or B)
-     * @param n the n from 0 (min) to 100 (max), eg:0
-     */
-    //% blockId=motordrive_backwards block="move %motors|backwards with speed %n"
-    //% n.min=0 n.max=100
-    export function backwards(motor: Motors, n: number): void {
-
-        if (motor === Motors.MotorA) {
-            pins.digitalWritePin(DigitalPin.P12, 1)
-            pins.digitalWritePin(DigitalPin.P13, 0)
-    
-            pins.analogWritePin(AnalogPin.P1, n * 1023 / 100)
-            
-        } else {
-            pins.digitalWritePin(DigitalPin.P15, 1)
-            pins.digitalWritePin(DigitalPin.P16, 0)
-    
-            pins.analogWritePin(AnalogPin.P2, n * 1023 / 100)
-            
-        }
-
+        pins.digitalWritePin(pin1, direction === Directions.Forward ? 1 : 0)
+        pins.digitalWritePin(pin2, direction === Directions.Forward ? 0 : 1)
     }
 
 }

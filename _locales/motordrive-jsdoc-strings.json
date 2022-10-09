@@ -1,0 +1,8 @@
+{
+  "motordrive": "Use this file to define custom functions and blocks.\r\nRead more at https://makecode.microbit.org/blocks/custom\r\n\r\nCustom blocks",
+  "motordrive.activate": "Activate MotorDrive",
+  "motordrive.move": "Dreht den gewählten Motor in die gewählte Richtung",
+  "motordrive.move|param|motor": "Choose motor output A or B",
+  "motordrive.move|param|direction": "Choose direction forwards or backwards",
+  "motordrive.move|param|n": "the n from 0 (min) to 100 (max), eg:0"
+}

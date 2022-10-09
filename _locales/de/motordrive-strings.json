@@ -1,0 +1,6 @@
+{
+  "motordrive.activate|block": "Aktiviere MotorDrive",
+  "motordrive.move|block": "Drehe %motor | %direction | mit Geschwindigkeit %n",
+  "motordrive|block": "MotorDrive",
+  "{id:category}MotorDrive": "MotorDrive"
+}

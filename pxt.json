@@ -1,7 +1,7 @@
 {
-    "name": "wellemann-motor-drive",
-    "version": "1.0.7",
-    "description": "Extension for Wellemann Motor Drive Breakout Board",
+    "name": "VMM403 MotorDrive",
+    "version": "1.1.0",
+    "description": "Extension for Wellemann Motor Drive Breakout Board (VMM403 or WPI403)",
     "license": "MIT",
     "dependencies": {
         "core": "*"
@@ -9,7 +9,8 @@
     "files": [
         "README.md",
         "main.ts",
-        "_locales/de/motorbit-strings.json"
+        "_locales/de/motordrive-strings.json",
+        "_locales/de/motordrive-jsdoc-strings.json"
     ],
     "testFiles": [
         "tests.ts"
