@@ -1,15 +1,15 @@
 {
-    "name": "motorbit",
-    "version": "2.0.0",
-    "description": "ELECFREAKS motor:bit",
+    "name": "wellemann-motor-drive",
+    "version": "1.0.0",
+    "description": "Extension for Wellemann Motor Drive Breakout Board",
     "license": "MIT",
     "dependencies": {
         "core": "*"
     },
     "files": [
         "README.md",
-        "motorbit.ts",
-        "_locales/zh/motorbit-strings.json"
+        "main.ts",
+        "_locales/de/motorbit-strings.json"
     ],
     "testFiles": [
         "tests.ts"
