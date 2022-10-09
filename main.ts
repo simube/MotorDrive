@@ -37,9 +37,9 @@ namespace motorbit {
     */
     //% blockId=motordrive_forwards block="move %motors|forward with speed %n"
     //% n.min=0 n.max=100
-    export function forwards(motors: motor, n: number): void {
+    export function forwards(motor: Motors, n: number): void {
 
-        if (motors === 1) {
+        if (motor === 1) {
             pins.digitalWritePin(DigitalPin.P12, 0)
             pins.digitalWritePin(DigitalPin.P13, 1)
     
@@ -62,9 +62,9 @@ namespace motorbit {
      */
     //% blockId=motordrive_backwards block="move %motors|backwards with speed %n"
     //% n.min=0 n.max=100
-    export function backwards(motors: motor, n: number): void {
+    export function backwards(motor: Motors, n: number): void {
 
-        if (motors === 1) {
+        if (motor === 1) {
             pins.digitalWritePin(DigitalPin.P12, 1)
             pins.digitalWritePin(DigitalPin.P13, 0)
     
