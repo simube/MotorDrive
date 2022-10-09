@@ -10,8 +10,13 @@ WPI403 or VMM403
 
 ## Code Example
 ```JavaScript
-basic.forever(() => {
+input.onButtonPressed(Button.A, function () {
+    motordrive.move(Motors.A, Directions.Forward, 63)
 })
+input.onButtonPressed(Button.B, function () {
+    motordrive.move(Motors.A, Directions.Forward, 0)
+})
+motordrive.activate()
 ```
 
 ## License
