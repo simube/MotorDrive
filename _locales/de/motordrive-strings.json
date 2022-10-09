@@ -1,6 +1,6 @@
 {
-  "Motors.MotorA|block": "Motor A",
-  "Motors.MotorB|block": "Motor B",
+  "Motors.A1A2|block": "Motor A1/A2",
+  "Motors.B1B2|block": "Motor B1/B2",
   "Directions.Forward|block": "Vorwärts",
   "Directions.Backward|block": "Rückwärts",
   "motordrive.activate|block": "Aktiviere MotorDrive",

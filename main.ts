@@ -3,9 +3,9 @@
  */
 enum Motors {
     //% block="Motor A"
-    A = 1,
+    A1A2 = 1,
     //% block="Motor B"
-    B = 2
+    B1B2 = 2
 }
 
 enum Directions {
@@ -53,7 +53,7 @@ namespace motordrive {
     //% blockId=motordrive_move block="move %motor|%direction|with speed %n"
     //% n.min=0 n.max=100
     export function move(motor: Motors, direction: Directions, n: number): void {
-        if (motor === Motors.A) {
+        if (motor === Motors.A1A2) {
             pins.analogWritePin(AnalogPin.P1, n * 1023 / 100)
     
             pins.digitalWritePin(DigitalPin.P12, direction === Directions.Forward ? 1 : 0)
