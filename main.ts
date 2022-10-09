@@ -26,18 +26,27 @@ namespace motordrive {
     export function motors(motor: Motors): number {
         return motor;
     }
+
+    /**
+     * Choose the direction of rotation
+    */
+    //% weight=2 blockGap=8
+    //% blockId="motordrive_directions" block="%direction"
+    export function directions(direction: Directions): number {
+        return direction;
+    }
     
 
     /**
-    * TODO: describe your function here
+    * Put this block in the "on start" block
     */
-    //% blockId=motordrive_activate block="activate MotorDrive"
+    //% blockId=motordrive_activate block="Activate MotorDrive"
     export function activate(): void {
         pins.digitalWritePin(DigitalPin.P14, 1)
     }
     
     /**
-    * TODO: describe your function here
+    * Turns the motor in the chosen direction
     * @param motor the motor to control (A or B)
     * @param n the n from 0 (min) to 100 (max), eg:0
     */
