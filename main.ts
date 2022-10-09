@@ -45,19 +45,17 @@ namespace motordrive {
     //% n.min=0 n.max=100
     export function move(motor: Motors, direction: Directions, n: number): void {
         if (motor === Motors.MotorA) {
-            let pinSpeed = AnalogPin.P1
-            let pin1 = DigitalPin.P12
-            let pin2 = DigitalPin.P13
+            pins.analogWritePin(AnalogPin.P1, n * 1023 / 100)
+    
+            pins.digitalWritePin(DigitalPin.P12, direction === Directions.Forward ? 1 : 0)
+            pins.digitalWritePin(DigitalPin.P13, direction === Directions.Forward ? 0 : 1)
         } else {
-            let pinSpeed = AnalogPin.P2
-            let pin1 = DigitalPin.P15
-            let pin2 = DigitalPin.P16
+            pins.analogWritePin(AnalogPin.P2, n * 1023 / 100)
+    
+            pins.digitalWritePin(DigitalPin.P15, direction === Directions.Forward ? 1 : 0)
+            pins.digitalWritePin(DigitalPin.P16, direction === Directions.Forward ? 0 : 1)
         }
 
-        pins.analogWritePin(pinSpeed, n * 1023 / 100)
-
-        pins.digitalWritePin(pin1, direction === Directions.Forward ? 1 : 0)
-        pins.digitalWritePin(pin2, direction === Directions.Forward ? 0 : 1)
     }
 
 }
