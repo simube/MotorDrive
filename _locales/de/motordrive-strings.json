@@ -6,7 +6,7 @@
   "motordrive.activate|block": "Aktiviere MotorDrive",
   "motordrive.motors|block": "Motor %motor",
   "motordrive.directions|block": "Richtung %direction",
-  "motordrive.move|block": "Drehe %motor | %direction | mit Geschwindigkeit %n",
+  "motordrive.move|block": "Drehe %motor|%direction|mit Geschwindigkeit %n",
   "motordrive|block": "MotorDrive",
   "{id:category}MotorDrive": "MotorDrive"
 }

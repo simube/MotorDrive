@@ -3,9 +3,9 @@
  */
 enum Motors {
     //% block="Motor A"
-    MotorA = 1,
+    A = 1,
     //% block="Motor B"
-    MotorB = 2
+    B = 2
 }
 
 enum Directions {
@@ -50,10 +50,10 @@ namespace motordrive {
     * @param motor the motor to control (A or B)
     * @param n the n from 0 (min) to 100 (max), eg:0
     */
-    //% blockId=motordrive_move block="move %motor | %direction | with speed %n"
+    //% blockId=motordrive_move block="move %motor|%direction|with speed %n"
     //% n.min=0 n.max=100
     export function move(motor: Motors, direction: Directions, n: number): void {
-        if (motor === Motors.MotorA) {
+        if (motor === Motors.A) {
             pins.analogWritePin(AnalogPin.P1, n * 1023 / 100)
     
             pins.digitalWritePin(DigitalPin.P12, direction === Directions.Forward ? 1 : 0)
