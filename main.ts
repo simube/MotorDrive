@@ -33,13 +33,14 @@ namespace motorbit {
     
     /**
     * TODO: describe your function here
+    * @param motor the motor to control (A or B)
     * @param n the n from 0 (min) to 100 (max), eg:0
     */
     //% blockId=motordrive_forwards block="move %motors|forward with speed %n"
     //% n.min=0 n.max=100
     export function forwards(motor: Motors, n: number): void {
 
-        if (motor === 1) {
+        if (motor === Motors.MotorA) {
             pins.digitalWritePin(DigitalPin.P12, 0)
             pins.digitalWritePin(DigitalPin.P13, 1)
     
@@ -58,13 +59,14 @@ namespace motorbit {
 
     /**
      * TODO: describe your function here
+     * @param motor the motor to control (A or B)
      * @param n the n from 0 (min) to 100 (max), eg:0
      */
     //% blockId=motordrive_backwards block="move %motors|backwards with speed %n"
     //% n.min=0 n.max=100
     export function backwards(motor: Motors, n: number): void {
 
-        if (motor === 1) {
+        if (motor === Motors.MotorA) {
             pins.digitalWritePin(DigitalPin.P12, 1)
             pins.digitalWritePin(DigitalPin.P13, 0)
     
