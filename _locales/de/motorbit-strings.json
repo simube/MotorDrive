@@ -1,4 +1,5 @@
 {
+  "motordrive.activate|block": "Aktiviere MotorDrive",
   "motordrive.backwards|block": "Drehe %motors|rückwärts mit Geschwindigkeit %n",
   "motordrive.forwards|block": "Drehe %motors|vorwärts mit Geschwindigkeit %n",
   "motordrive|block": "MotorDrive",
