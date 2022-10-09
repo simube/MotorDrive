@@ -1,0 +1,9 @@
+{
+  "motordrive.motors": "Choose, which motor you want to control",
+  "motordrive.directions": "Choose the direction of rotation",
+  "motordrive.activate": "Put this block in the \"on start\" block",
+  "motordrive.move": "Turns the motor in the chosen direction",
+  "motordrive.move|param|motor": "Choose motor output A or B",
+  "motordrive.move|param|direction": "Choose direction forwards or backwards",
+  "motordrive.move|param|n": "the n from 0 (min) to 100 (max), eg:0"
+}

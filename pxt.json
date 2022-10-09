@@ -1,6 +1,6 @@
 {
     "name": "MotorDrive",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "description": "Extension for Wellemann Motor Drive Breakout Board (VMM403 or WPI403)",
     "license": "MIT",
     "dependencies": {
