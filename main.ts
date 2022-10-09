@@ -39,7 +39,7 @@ namespace motorbit {
     //% n.min=0 n.max=100
     export function forwards(motors: motor, n: number): void {
 
-        if (motor === 1) {
+        if (motors === 1) {
             pins.digitalWritePin(DigitalPin.P12, 0)
             pins.digitalWritePin(DigitalPin.P13, 1)
     
@@ -64,7 +64,7 @@ namespace motorbit {
     //% n.min=0 n.max=100
     export function backwards(motors: motor, n: number): void {
 
-        if (motor === 1) {
+        if (motors === 1) {
             pins.digitalWritePin(DigitalPin.P12, 1)
             pins.digitalWritePin(DigitalPin.P13, 0)
     
