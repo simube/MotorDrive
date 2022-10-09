@@ -1,10 +1,7 @@
-/**
- * Different modes for RGB or RGB+W NeoPixel strips
- */
 enum Motors {
-    //% block="Motor A"
+    //% block="Motor on A1/A2"
     A1A2 = 1,
-    //% block="Motor B"
+    //% block="Motor on B1/B2"
     B1B2 = 2
 }
 
@@ -48,6 +45,7 @@ namespace motordrive {
     /**
     * Turns the motor in the chosen direction
     * @param motor the motor to control (A or B)
+    * @param direction the direction to rotate
     * @param n the n from 0 (min) to 100 (max), eg:0
     */
     //% blockId=motordrive_move block="move %motor|%direction|with speed %n"
